@@ -1,38 +1,665 @@
+/***************************** Coming Soon *****************************/
+
 .App {
+  font-family: "roboto", sans-serif;
   text-align: center;
+} 
+
+.background {
+  display: inline-block;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-color: #24A2FD !important;
+  background-image: linear-gradient(to right, #1398FF , #27BFFF);
+  /* background-image: linear-gradient(to right, #333333 , #222222); */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  height: 120px;
+  width: 120px;
+  margin-top: 35vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.coming {
+  color: white;
+  margin-top: 2vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.early-access{
+  background-color: transparent;
+  color: white;
+  border-radius: 100px;
+  border-color: white !important;
+  border-style: solid;
+  font-weight: 500;
+  margin-top: 2vh;
+  padding: 0.2rem 2.5rem;
+}
+
+.early-access:hover {
+  background-color: white;
+  color: #24A2FD;
+  border-color: #24A2FD !important;
+}
+
+.login-link {
+  color: white;
+  margin-top: 2vh;
+}
+
+/***************************** Input *****************************/
+
+.white-container {
+  color: gray;
+  display: inline-block;
+  background-color: white;
+  border-radius: 50px;
+  font-weight: 500;
+  margin-top: 12vh;
+  padding: 3rem 5rem;
+  box-shadow: 0 5px 10px rgba(66, 63, 63, 0.2);
+}
+
+.wc-input {
+  text-align: center;
+  padding: 2rem 5rem;
+  position: relative;
+  top: 6rem;
+}
+
+.cross {
+  color: rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: lighter;
+  transform: rotate(45deg);
+  width: 80px;
+  position: relative;
+  right: 12.5rem;
+  bottom: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.input-code {
+  display: inline-block;
+  margin-top: 0;
+  position: relative;
+  bottom: 4rem;
+}
+
+.code-box {
+  width: 2.5rem;
+  height: 3.5rem;
+  border-radius: 10px !important;
+  margin: auto 0.3rem;
+}
+
+.hyphen {
+  display: inline-block;
+  margin: auto 0.3rem;
+}
+
+.cta {
+  background-color: transparent;
+  color: #24A2FD;
+  border-radius: 100px;
+  border-color: #24A2FD !important;
+  border-style: solid;
+  font-weight: 500;
+  margin-top: 3rem;
+  padding: 0.2rem 2.5rem;
+}
+
+.cta:hover {
+  background-color: #24A2FD;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/***************************** Metamask *****************************/
+
+.ethAccount {
+  color: white;
+  margin-top: 18rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.next {
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 2rem;
+  font-weight: bold;
+}
+
+.connect-wallet {
+  color: white;
+  font-size: 2.5rem;
+  position: relative;
+  top: 25vh;
+}
+
+.metamask-img {
+  height: 2.5rem;
+  width: 2.5rem;
+  position: relative;
+  top: 33vh;
+  left: 3rem;
+  z-index: 1;
+}
+
+.metamask-btn {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-style: none;
+  border-radius: 100px;
+  padding: 1rem 8rem;
+  position: relative;
+  top: 33vh;
+  right: 0.8rem;
+}
+
+/***************************** Create Account *****************************/
+
+.create {
+  display: flex;
+  font-weight: normal;
+  justify-content: center;
+  margin-bottom: 3rem;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.login-label {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.85);
+  margin-bottom: 3px;
+  margin-left: 1rem;
+  text-align: left;
+}
+
+input {
+  background-color: rgba(0, 0, 0, 0.07);
+  border-style: none;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  margin-bottom: 15px;
+  color: rgba(0, 0, 0, 0.7);;
+  padding: 5px 15px;
+  width: 300px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.pwd-input {
+  margin-bottom: 15px;
+}
+
+.pswd-terms {
+  color: crimson;
+  font-size: 0.6rem;
+  font-weight: normal;
+  line-height: 0;
+  margin-left: 1rem;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  text-align: left;
+}
+
+.valid-email-pass{
+  color: crimson;
+  font-size: 0.6rem;
+  font-weight: normal;
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.valid-email-pass2 {
+  margin-bottom: 0;
+}
+
+.pswd-red {
+  color: crimson;
+} 
+
+.pswd-green {
+  color: green;
+}
+
+.required {
+  font-size: 0.6rem;
+  font-weight: normal;
+  position: relative;
+  top: 3rem;
+  left: 7.2rem;
+}
+
+.metamask-div {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  width: 50%;
+  margin-top: 50px;
+  margin-left: 20%;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.metamask {
+  height: 50px;
+  width: 50px;
+}
+
+.connect {
+  color: #24A2FD;
+  font-size: 0.6rem;
+  display: flex;
+  justify-content: center;
+  margin-left: -25px;
+  margin-top: 5px;
+}
+
+.metamask2 {
+  margin-left: 32%;
+  height: 20px;
+  width: 20px;
+}
+
+.tick {
+  margin-left: 1%;
+  height: 10px;
+  width: 10px;
+}
+
+.connected {
+  display: inline-block;
+  font-size: 0.6rem;
+  margin-left: 1%;
+}
+
+.confirm {
+  background-color: #24A2FD;
+  border-radius: 100px;
+  border-style: none;
+  font-size: 0.8rem;
+  padding: 5px 20px;
+}
+
+.sign-in, .sign-up {
+  font-weight: normal;
+  font-size: 0.8rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+/***************************** Login *****************************/
+
+.wcLogin {
+  margin-top: 20vh !important;
+}
+
+.login-btn {
+  position: relative;
+  left: 0rem;
+}
+
+/***************************** Buy Now *****************************/
+
+.buy-now-wrap {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "roboto", sans-serif;
+  text-align: center;
+}
+
+.wallet-address {
+  position: absolute;
+  top: 15px;
+  left: 23px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.balance {
+  position: absolute;
+  top: 35px;
+  left: 23px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+#address, #bal {
+  font-style: italic;
+  font-weight: 500;
+  margin-left: 5px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#updating {
+  color: rgba(255, 255, 255, 0.8);;
+  display: flex;
+  font-style: italic;
+  font-weight: 500;
+  justify-content: center;
+  position: relative;
+  top: 5rem;
+}
+
+.white-container2 {
+  color: gray;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 0 5px 10px rgba(66, 63, 63, 0.2);
+  font-weight: 500;
+  margin-top: 13vh;
+  padding: 3rem 5rem 2.5rem;
+  position: relative;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  position: relative;
+}
+
+.right-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 9rem;
+}
+
+.info {
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+  color: rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  font-size: 0.9rem;
+  position: absolute;
+  top: 30px;
+  left: 50px;
+}
+
+.tooltip1{
+  height: 3rem;
+  width: 18rem !important;
+  display: none;
+  color: black;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-size: 0.6rem;
+  position: absolute;
+  top: 1.5rem;
+  left: 5rem;
+  padding: 0.5rem 0.5rem;
+  border-radius: 10px;
+}
+
+.song-poster {
+  height: 15rem;
+  width: 15rem;
+  border-radius: 25px;
+}
+
+.song-info {
+  text-align: left;
+}
+
+.song-info h1 {
+  letter-spacing: -0.7px;
+  font-size: 1.9rem;
+  margin-top: 1rem;
+}
+
+.artist-img {
+  height: 35px;
+  width: 35px;
+  border-radius: 100%;
+  box-shadow: 1px 1px 5px rgba(66, 63, 63, 0.4);
+  position: relative;
+  bottom: 0.2rem;
+  margin-right: 12px;
+}
+
+.white-container-inner {
+  color: gray;
+  display: inline-block;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0 5px 10px rgba(66, 63, 63, 0.35);
+  font-weight: 500;
+  margin-bottom: 2rem;
+  margin-left: 9rem;
+  padding: 2rem 1rem 1rem;
+  text-align: center;
+}
+
+.qty {
+  font-size: 0.8rem;
+  margin-bottom: 2px;
+  margin-left: -3.7rem;  
+}
+
+.qty-input {
+  width: 60%;
+  margin-bottom: 3rem;
+  height: 2rem;
+}
+
+.left {
+  font-size: 0.75rem;
+  font-weight: normal;
+  float: left;
+  margin-left: 10px;
+}
+
+.right {
+  font-size: 0.75rem;
+  font-weight: normal;
+  float: right;
+  margin-right: 10px;
+}
+
+hr {
+  margin: 0 auto 5px;
+  width: 15rem;
+}
+
+.terms {
+  color: #24A2FD;
+  display: inline-block;
+  font-size: 0.6rem;
+  margin-top: 2rem;
+}
+
+.checkbox {
+  width: 10px;
+  margin-left: 7px;
+  position: relative;
+  top: 3px;
+}
+
+.buy-now-btn {
+  background-color: #2BE743;
+  border-radius: 100px;
+  border-style: none;
+  font-size: 0.8rem;
+  padding: 7px 25px;
+  cursor: pointer;
+  margin-bottom: 1.3rem;
+}
+
+.btn-sep {
+  margin-bottom: 0;
+}
+
+.your-tokns-btn {
+  color: #27BFFF;
+  font-size: 0.8rem;
+  margin-top: 0;
+}
+
+.your-tokns-btn:hover {
+  color: #27BFFF;
+  text-decoration: underline;
+}
+
+.buy-now-btn:hover {
+  background-color: #2BE743;
+}
+
+.buy-now-btn:focus {
+  background-color: #2BE743;
+}
+
+.btn-inactive {
+  opacity: 40%;
+}
+
+@media (max-width: 950px) {
+
+  .white-container2{
+    align-items: center;
+    flex-direction: column;
+    padding-top: 3.7rem;
+    padding-left: 7rem;
+    padding-right: 7rem;
+    padding-bottom: 3.5rem;
+    margin-bottom: 6rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .tooltip1 {
+    top: 0.5rem;
   }
+
+  .white-container-inner {
+    margin: 2rem auto 0;
+  }
+
+  .info {
+    left: 30px;
+  }
+
+  .tooltip1 {
+    left: 4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .white-container2{
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .info {
+    left: 30px;
+  }
+
+  .tooltip1 {
+    left: 4rem;
+  }
+}
+
+.popup-btn {
+  width: 15rem;
+  font-weight: bold;
+  letter-spacing: 0.6px;
+}
+
+.pb1 {
+  background-color: #24A2FD;
+}
+
+.popup-wrapper {
+  background-color: rgba(0,0,0,0.8);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 50px;
+  background-color: white;
+  position: relative;
+  border-radius: 20px;
+  padding-top: 80px;
+}
+
+.popup-close {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 1.8rem;
+  transform: rotate(45deg);
+}
+
+/***************************** Congrats *****************************/
+
+.wci2 {
+ 
+}
+
+.congrats {
+  height: 20px;
+  width: 20px;
+  margin: auto 5px;
+}
+
+.large-text {
+  font-size: 0.75rem;
+  font-weight: normal;
+  letter-spacing: -0.5px;
+}
+
+.blue-text {
+  color: #24A2FD;
+}
+
+.bold-text {
+  font-weight: 500;
+}
+
+.twitter, .telegram, .instagram {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  right: 2rem;
+  top: 1.5rem;
+}
+
+.twitter {
+  right: 6rem;
+}
+
+.telegram {
+  right: 4rem;
+}
+
+.song-img2 {
+  bottom: 3.8rem;
+}
+
+.song-info2 {
+  top: 2rem;
 }
